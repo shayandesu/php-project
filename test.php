@@ -15,7 +15,7 @@ if (!file_exists($storagefile))
 $count = file_get_contents($storagefile);
 file_put_contents($storagefile, ($count + 1));
 
-$newfile= fopen("$count.txt", "w+") or die("Unable to open file!");
+$newfile= fopen("/var/www/html/Submits/$count.txt", "w+") or die("Unable to open file!");
 
 $txt =  "Name: $firstname $lastname\n";
 fwrite($newfile, $txt);
